@@ -8,16 +8,19 @@ function App() {
   let [counter, setCounter]  = useState(15)
 
   const addValue = ()=>{
-    console.log("Add " + counter);
+    // console.log("Add " + counter);
     // counter += 1;
-    setCounter(counter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
   }
 
   const reduceValue = () =>{
     console.log("Reduce " + counter);
-    // counter -= 1;
-    // if(counter<0) counter=0
-    // setCounter(counter)
+    counter -= 1;
+    if(counter<0) counter=0
+    setCounter(counter)
 
     
   }
